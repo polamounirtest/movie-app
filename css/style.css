@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS that's easier to do directly */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
+/* custom scroll bar */
+html::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: #020307;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: #ff2c1f;
+  border-radius: 5rem;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  background-color: #ff2c1f;
+  width: 0;
+  height: 3px;
+  left: 0;
+  bottom: -4px;
+  transition: 0.4s all linear;
+}
+.navbar a:hover::after,
+.navbar .home-active::after {
+  width: 100%;
+}
+
+.box-img img {
+  transition: 0.2s all linear;
+}
+.box-img img:hover {
+  transform: translateY(-10px);
+}
+
+.social-icons a {
+  transition: 0.2s all linear;
+}
+
+.navbar.active {
+  display: flex;
+  width: 100%;
+  background: #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(0%, 100%);
+
+  ul {
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+}
