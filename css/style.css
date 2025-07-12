@@ -2,13 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom CSS that's easier to do directly */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 2rem;
 }
 
-/* custom scroll bar */
 html::-webkit-scrollbar {
   width: 0.5rem;
   background-color: #020307;
@@ -62,3 +60,8 @@ html::-webkit-scrollbar-thumb {
     padding: 1rem;
   }
 }
+
+#home {
+   background-image: url('../img/home3.jpg');
+  }
+
